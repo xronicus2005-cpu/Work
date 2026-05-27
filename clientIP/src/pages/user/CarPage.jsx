@@ -141,7 +141,7 @@ const CarPage = () => {
                             </article>
                         ))
                     ) : (
-                        <div className="car-empty-message">Hazirshe bos...</div>
+                        <div className="car-empty-message">Házirshe bos...</div>
                     )}
                 </div>
             </div>
