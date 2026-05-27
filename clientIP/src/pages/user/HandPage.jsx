@@ -143,7 +143,7 @@ const HandPage = () => {
                                 </article>
                             ))
                         ): (
-                        <div className="hand-empty-message">Hazirshe bos...</div>
+                        <div className="hand-empty-message">Házirshe bos...</div>
 
                         )}
 
