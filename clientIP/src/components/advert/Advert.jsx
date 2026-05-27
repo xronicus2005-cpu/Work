@@ -45,12 +45,12 @@ const Advert = () => {
                 {/* Static Content Layer */}
                 <div className="advert-content-overlay">
                     <div className="advert-text-block">
-                        <h1 className="advert-headline">Jana jumis vakansiyalar</h1>
+                        <h1 className="advert-headline">Jańa jumıs vakansiyaları</h1>
                         <p className="advert-subline">
-                            Registraciyadan otin<br />
-                            Jumis tabin
+                            Dizimnen ótiń<br />
+                            Jumıs tabıń
                         </p>
-                        <button className="advert-cta-btn btn-primary">Registraciya</button>
+                        <button className="advert-cta-btn btn-primary">Dizimnen ótiw</button>
                     </div>
                 </div>
 
