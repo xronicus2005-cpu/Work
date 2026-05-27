@@ -19,17 +19,17 @@ const Jobs = () => {
             
             <Link to="/teach" className="job-item">
                 <GraduationCap size={20} />
-                <span>Oqitiw</span>
+                <span>Oqıtıw</span>
             </Link>
             
             <Link to="/hand" className="job-item">
                 <Hammer size={20} />
-                <span>Qol Miyneti</span>
+                <span>Qol miyneti</span>
             </Link>
             
             <Link to="/car" className="job-item">
                 <Car size={20} />
-                <span>Mashinasazliq</span>
+                <span>Mashinasazlıq</span>
             </Link>
             
             <Link to="/electr" className="job-item">
