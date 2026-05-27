@@ -1,0 +1,150 @@
+.advert-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height: 500px;
+    position: relative;
+    z-index: 10;
+}
+
+.advert-glass-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-ios);
+    background: #fff; /* Ensures no bleed through */
+}
+
+.advert-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* Snappy but smooth transition */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.advert-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Updated for Clarity: Transparent top, subtle shadow at bottom only */
+.advert-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Subtle gradient so photos stay clear, but text remains readable */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
+}
+
+.advert-text-block {
+    pointer-events: auto;
+    text-align: center;
+    color: white;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.advert-headline {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    /* Stronger shadow since background is clearer */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); 
+}
+
+.advert-subline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 800px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.advert-cta-btn {
+    margin-top: 20px;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-ios);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.advert-cta-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-green-hover);
+}
+
+/* Controls & Dots */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.prev { left: 25px; }
+.next { right: 25px; }
+
+.dots-container {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active-dot {
+    background: var(--primary-green);
+    width: 22px;
+    border-radius: 10px;
+}

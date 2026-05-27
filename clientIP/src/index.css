@@ -1,0 +1,54 @@
+:root {
+  /* Colors */
+  --bg-main: #f2f2f7;          /* Classic iOS light grey background */
+  --bg-card: rgba(255, 255, 255, 0.7); /* Translucent white */
+  --primary-green: #34c759;    /* Standard iOS System Green */
+  --primary-green-hover: #28a745;
+  
+  /* Text */
+  --text-main: #000000;
+  --text-secondary: #8e8e93;
+  
+  /* Glassmorphism Effects */
+  --glass-blur: blur(15px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  
+  /* Border Radius */
+  --radius-ios: 12px;          /* Smooth rounded corners */
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* The "Glass" Container */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur); /* Support for Safari */
+  border: var(--glass-border);
+  border-radius: var(--radius-ios);
+  box-shadow: var(--glass-shadow);
+  padding: 20px;
+  transition: var(--transition-smooth);
+}
+
+/* iOS Style Green Button */
+.btn-primary {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: var(--radius-ios);
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-hover);
+  transform: scale(0.98); /* Slight press effect */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}

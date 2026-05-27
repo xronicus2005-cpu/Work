@@ -1,0 +1,168 @@
+.profile-header-container {
+    margin: 20px 20px 0 0; /* Aligned with sidebar margin */
+    padding: 0 25px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.header-icon-btn {
+    position: relative;
+    color: var(--text-main);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff3b30; /* iOS Notification Red */
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.avatar-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-green);
+}
+
+.header-actions a {
+    text-decoration: none;
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-link{
+    color: black;
+}
+
+/* Container for positioning the menu */
+.avatar-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.avatar-btn:active {
+    transform: scale(0.95);
+}
+
+/* The Dropdown Menu */
+.dropdown-panel {
+    position: absolute;
+    top: 60px; /* Positioned below the avatar */
+    right: 0;
+    width: 220px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
+    /* Glass effect already handled by your .glass-card class, 
+       but we add shadow and border for depth */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: dropdownFadeIn 0.2s ease-out;
+}
+
+/* User info header inside dropdown */
+.user-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info strong {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.user-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.dropdown-panel hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 8px 0;
+}
+
+/* Dropdown Buttons */
+.dropdown-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-align: left;
+}
+
+.dropdown-action:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-action.danger {
+    color: #ff3b30; /* iOS Red */
+}
+
+.dropdown-action.danger:hover {
+    background: rgba(255, 59, 48, 0.1);
+}
+
+/* Entry Animation */
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

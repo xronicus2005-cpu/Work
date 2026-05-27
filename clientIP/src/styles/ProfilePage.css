@@ -1,0 +1,290 @@
+:root {
+    /* Colors */
+    --bg-main: #f5f5f7;
+    --primary-green: #34c759;
+    --primary-green-hover: #2dbb50;
+    --text-main: #1d1d1f;
+    --text-secondary: #86868b;
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.04);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.08);
+    
+    /* Transitions */
+    --transition-ios: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius-lg: 24px;
+    --radius-md: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Root Container --- */
+.profile-view-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* Slimmer sidebar */
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Global Glass Card Style --- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* --- SIDEBAR --- */
+.profile-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.profile-card {
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--primary-green), #fff);
+}
+
+.main-profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.change-photo-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: var(--transition-ios);
+}
+
+.change-photo-overlay:hover {
+    transform: scale(1.1);
+    background: var(--primary-green);
+    color: #fff;
+}
+
+.aside-details h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.user-role-text {
+    font-size: 0.75rem;
+    color: var(--primary-green);
+    background: rgba(52, 199, 89, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* --- Stats Mini Card --- */
+.stats-mini-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mini-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.mini-item:last-child { border: none; padding: 0; }
+
+.mini-item label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.mini-item p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* --- MAIN CONTENT --- */
+.card-header {
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.save-btn-premium {
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-ios);
+}
+
+.save-btn-premium:hover {
+    background: var(--primary-green-hover);
+    box-shadow: 0 5px 15px rgba(52, 199, 89, 0.3);
+}
+
+/* --- Form Grid --- */
+.form-sections-wrapper {
+    padding: 35px;
+}
+
+.inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Reduced gap to prevent "messy" overlap */
+}
+
+.input-group-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.input-group-profile label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.input-group-profile input, 
+.input-group-profile select, 
+.input-group-profile textarea {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid transparent;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    transition: var(--transition-ios);
+    width: 100%;
+}
+
+.input-group-profile input:focus, 
+.input-group-profile select:focus, 
+.input-group-profile textarea:focus {
+    background: #fff;
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(52, 199, 89, 0.1);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* --- Section Divider --- */
+.password-section-divider {
+    grid-column: 1 / -1;
+    margin: 40px 0 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 20px;
+}
+
+.password-section-divider span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-aside {
+        position: static;
+        flex-direction: row;
+    }
+
+    .profile-card, .stats-mini-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-aside {
+        flex-direction: column;
+    }
+
+    .inputs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+.date-icon{
+    margin-right: 5px;
+}

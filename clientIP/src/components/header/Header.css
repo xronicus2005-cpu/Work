@@ -1,0 +1,139 @@
+/* Layout Alignment */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: sticky;
+  top: 15px; /* Floating effect */
+  margin: 0 20px;
+  z-index: 1000;
+  height: 64px;
+}
+
+.header-left, .header-center, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+}
+
+/* Search Bar iOS Style */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary);
+}
+
+.search-bar input {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  padding: 8px 12px 8px 38px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  width: 200px;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.search-bar input:focus {
+  background: rgba(0, 0, 0, 0.08);
+  width: 250px;
+}
+
+/* Navigation Links */
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: var(--primary-green);
+}
+
+/* Account & Dropdown */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.icon-button:hover {
+  color: var(--primary-green);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-item {
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item.logout {
+  color: #ff3b30; /* iOS System Red */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 5px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary{
+    text-decoration: none;
+}

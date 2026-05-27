@@ -1,0 +1,64 @@
+.jobs-nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* Using your variables */
+    margin: 20px auto; 
+    padding: 12px 20px;
+    width: 90%; /* Floating look */
+    max-width: 1200px;
+    
+    /* Overriding basic aqua with glass */
+    background: var(--bg-card);
+    border-radius: var(--radius-ios);
+}
+
+.job-item {
+    display: flex;
+    flex-direction: column; /* Stack icon over text */
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.job-item span {
+    transition: var(--transition-smooth);
+}
+
+/* Hover Effects */
+.job-item:hover {
+    color: var(--primary-green);
+    background: rgba(52, 199, 89, 0.1); /* Subtle green tint */
+}
+
+.job-item:hover span {
+    transform: translateY(2px);
+}
+
+/* Special styling for the "All" category */
+.all-categories {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+/* Responsive: scroll horizontally on small screens */
+@media (max-width: 768px) {
+    .jobs-nav-bar {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .job-item {
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,59 @@
+.person-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-ios);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin-bottom: 4px;
+}
+
+.person-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.person-item.active {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.person-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.person-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.person-name {
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.person-item.active .person-name,
+.person-item.active .person-preview,
+.person-item.active .person-time {
+  color: white;
+}
+
+.person-preview {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.person-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
