@@ -40,8 +40,8 @@ const Footer = () => {
                         <ul>
                             <li><a href="#">Vakansiyalar</a></li>
                             <li><a href="#">Xizmetler</a></li>
-                            <li><a href="#">Biz haqqimizda</a></li>
-                            <li><a href="#">Jardem</a></li>
+                            <li><a href="#">Biz haqqında</a></li>
+                            <li><a href="#">Járdem</a></li>
                         </ul>
                     </div>
 
