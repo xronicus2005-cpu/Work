@@ -33,7 +33,7 @@ const GptPage = ({ close }) => {
       
 
         //before impelemtation i need to change this link
-      const res = await fetch("https://work.org.uz/api/askGPT", {
+      const res = await fetch("https://work-oald.onrender.com/api/askGPT", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: promptText }),
