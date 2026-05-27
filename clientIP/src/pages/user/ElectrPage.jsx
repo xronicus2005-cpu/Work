@@ -140,7 +140,7 @@ const ElectrPage = () => {
                                        </article>
                                    ))
                                ) : (
-                                   <div className="teach-empty-message">Hazirshe bos...</div>
+                                   <div className="teach-empty-message">Házirshe bos...</div>
                                )}
                            </div>
                        </div>
