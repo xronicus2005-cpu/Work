@@ -75,8 +75,8 @@ const Register = () => {
         <div className="register-page-wrapper">
             <div className="register-card glass-card">
                 <div className="register-header">
-                    <h1>Ro'yxatdan o'tish</h1>
-                    <p>Ma'lumotlaringizni kiriting</p>
+                    <h1>Dizimnen ótiw</h1>
+                    <p>Maǵluwmatlarıńızdı kirgiziń</p>
                 </div>
 
                 <form className="register-form" onSubmit={handleSubmit}>
@@ -84,7 +84,7 @@ const Register = () => {
 
                         <div className="input-group">
                             <Icon name="User" size={18} className="input-icon" />
-                            <input placeholder="Ism" onChange={(e) => setName(e.target.value)} required />
+                            <input placeholder="At" onChange={(e) => setName(e.target.value)} required />
                         </div>
 
                         <div className="input-group">
@@ -94,7 +94,7 @@ const Register = () => {
 
                         <div className="input-group">
                             <Icon name="Users" size={18} className="input-icon" />
-                            <input placeholder="Otasining ismi" onChange={(e) => setFathername(e.target.value)} />
+                            <input placeholder="Ákesinin atı" onChange={(e) => setFathername(e.target.value)} />
                         </div>
 
                         <div className="input-group">
@@ -105,9 +105,9 @@ const Register = () => {
                         <div className="input-group">
                             <Icon name="Info" size={18} className="input-icon" />
                             <select onChange={(e) => setSex(e.target.value)} required>
-                                <option value="">Jinsingiz</option>
-                                <option value="Erkak">Erkak</option>
-                                <option value="Ayol">Ayol</option>
+                                <option value="">Jınısıńız</option>
+                                <option value="Erkak">Erkek</option>
+                                <option value="Ayol">Hayal</option>
                             </select>
                         </div>
 
@@ -125,7 +125,7 @@ const Register = () => {
                                 }}
                                 required
                             >
-                                <option value="">Viloyatni tanlang</option>
+                                <option value="">Wálayattı tańlań</option>
                                 {Object.keys(locationData).map((region) => (
                                     <option key={region} value={region}>
                                         {region}
@@ -141,7 +141,7 @@ const Register = () => {
                                 disabled={!state}
                                 required
                             >
-                                <option value="">Tumanni tanlang</option>
+                                <option value="">Rayondı tańlań</option>
                                 {state &&
                                     locationData[state].map((cityItem) => (
                                         <option key={cityItem} value={cityItem}>
@@ -155,7 +155,7 @@ const Register = () => {
                             <Icon name="Lock" size={18} className="input-icon" />
                             <input
                                 type="password"
-                                placeholder="Parol yarating"
+                                placeholder="Parol jaratıń"
                                 onChange={(e) => setPass(e.target.value)}
                                 required
                             />
@@ -163,7 +163,7 @@ const Register = () => {
                     </div>
 
                     <button type="submit" className="register-btn btn-primary">
-                        Ro'yxatdan o'tish
+                        Dizimnen ótiw
                     </button>
                 </form>
             </div>
