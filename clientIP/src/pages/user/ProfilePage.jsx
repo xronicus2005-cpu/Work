@@ -245,7 +245,7 @@ const ProfilePage = () => {
                                 </div>
 
                                 <div className="input-group-profile">
-                                    <label>Atańızdıń atı</label>
+                                    <label>Ákesiniń atı </label>
                                     <input name="fathers_name" value={current.fathers_name || ""} onChange={handleChange} placeholder="Kiritiń..." />
                                 </div>
 
