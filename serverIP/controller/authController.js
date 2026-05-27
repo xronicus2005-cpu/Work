@@ -42,7 +42,7 @@ export async function createUser(req, res) {
         res.cookie("accessToken", token, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 24 * 60 * 60 * 1000
         })
 
@@ -104,7 +104,7 @@ export async function loginUser(req, res) {
         res.cookie("accessToken", token, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 24 * 60 * 60 * 1000
         })
 
@@ -165,7 +165,7 @@ export async function logout(req, res) {
         res.clearCookie("accessToken", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "strict"
+            sameSite: "none"
         })
 
         return res.status(200).json({success: true, message: "Logged out!"})
