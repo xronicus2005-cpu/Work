@@ -24,7 +24,7 @@ const Header = () => {
             <nav className="header-center">
                 <Link to="/vocation" className="nav-link">Vakansiya</Link>
                 <Link to="/login" className="nav-link">Kiriw</Link>
-                <Link to="/register" className="btn-primary">Registraciya</Link>
+                <Link to="/register" className="btn-primary">Dizimnen ótiw</Link>
             </nav>
 
             <div className="header-right">
@@ -42,7 +42,7 @@ const Header = () => {
                         </Link>
                         <hr />
                         <button className="dropdown-item logout" onClick={logout}>
-                            <LogOut size={16} /> Shigiw
+                            <LogOut size={16} />Shıǵıw
                         </button>
                     </div>
                 )}
