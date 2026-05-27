@@ -54,7 +54,7 @@ const Login = () => {
                         <Icon name="User" size={32} color="var(--primary-green)" />
                     </div>
                     <h1>Xosh kelipsiz</h1>
-                    <p>Dawam etiw ushin akkountinizga kirin!</p>
+                    <p>Dawam etiw ushın akkauntıńızǵa kiriń!</p>
                 </div>
 
                 <form className="login-form" onSubmit={handleSubmit}>
@@ -76,7 +76,7 @@ const Login = () => {
                 </form>
 
                 <div className="login-footer">
-                    <span>Akkountiniz joqpa?</span>
+                    <span>Akkauntıńız joq pa?</span>
                     <Link to="/register" className="register-link">Registraciyadan otiw</Link>
                 </div>
             </div>
