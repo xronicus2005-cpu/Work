@@ -66,7 +66,7 @@ const TeachPage = () => {
                 <header className="teach-marketplace-header">
                     <div className="teach-header-content">
                         <h1 className="teach-main-title">Bilim Beriw</h1>
-                        <p className="teach-main-subtitle">Bilim Oraylari</p>
+                        <p className="teach-main-subtitle">Bilim orayları</p>
                     </div>
                 </header>
 
@@ -134,7 +134,7 @@ const TeachPage = () => {
                             </article>
                         ))
                     ) : (
-                        <div className="teach-empty-message">Hazirshe bos...</div>
+                        <div className="teach-empty-message">Házirshe bos...</div>
                     )}
                 </div>
             </div>
